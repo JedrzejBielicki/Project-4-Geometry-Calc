@@ -60,12 +60,41 @@
             <input id="side-b" type="number" required>
             <br>
             <button onclick="rectangle()">Oblicz</button>
-            <p>Pole prostokątu wynosi:</p>
+            <p>Pole prostokąta wynosi:</p>
             <p class="rectangle-result"></p>
+        </div>
+    </div>
+    <div class="calc">
+        <div class="box">
+            <h2>Trójkąt</h2>
+            <p>Podaj długość boku a (cm):</p>
+            <input id="triangle-side" type="number" required>
+            <p>Podaj długość wysokości opuszczonej na bok a (cm):</p>
+            <input id="height" type="number" required>
+            <br>
+            <button onclick="triangle()">Oblicz</button>
+            <p>Pole trójkąta wynosi:</p>
+            <p class="triangle-result"></p>
+        </div>
+    </div>
+    <div class="calc">
+        <div class="box">
+            <h2>Trapez</h2>
+            <p>Podaj długość dłuższej podstawy (cm):</p>
+            <input id="trapezoid-side-longer" type="number" required>
+            <p>Podaj długość krótszej podstawy (cm):</p>
+            <input id="trapezoid-side-shorter" type="number" required>
+            <p>Podaj długość wysokości (cm):</p>
+            <input id="trapezoid-height" type="number" required>
+            <br>
+            <button onclick="trapezoid()">Oblicz</button>
+            <p>Pole trapezu wynosi:</p>
+            <p class="trapezoid-result"></p>
         </div>
     </div>
     </div>
 </main>
+<footer>Jędrzej Bielicki &copy , 01.2020</footer>
 <script src="app.js"></script>
 
 </html>

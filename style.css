@@ -5,7 +5,13 @@
 body{
     background: #1D2228;
     font-family: 'Open Sans', sans-serif;
-    height: 200vh;
+}
+footer{
+    height: 2rem;
+    margin-top: 20px;
+    background: #E1E2E2;
+    text-align: center;
+    color: #1D2228;
 }
 h1{
     color: #FB8122;
@@ -45,6 +51,7 @@ h2{
 .calc{
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 50px;;
 }
 .box{
     height: 40vh;
