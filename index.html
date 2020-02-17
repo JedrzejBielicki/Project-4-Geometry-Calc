@@ -21,8 +21,8 @@
         <div class="two-d">
             <h2>2D</h2>
             <ul>
-                <li>kwadrat</li>
-                <li>prostokąt</li>
+                <li id="square-calc">kwadrat</li>
+                <li id="rectangle-calc">prostokąt</li>
                 <li>trójkąt</li>
                 <li>trapez</li>
                 <li>rąb</li>
@@ -41,9 +41,31 @@
         </div>
     </div>
     <div class="calc">
-        <div class="square"></div>
+        <div class="box">
+            <h2>Kwadrat</h2>
+            <p>Podaj długość boku (cm):</p>
+            <input id="side" type="number" required>
+            <br>
+            <button onclick="square()">Oblicz</button>
+            <p>Pole kwadratu wynosi:</p>
+            <p class="square-result"></p>
+        </div>
+    </div>
+    <div class="calc">
+        <div class="box">
+            <h2>Prostokąt</h2>
+            <p>Podaj długość boku a (cm):</p>
+            <input id="side-a" type="number" required>
+            <p>Podaj długość boku b (cm):</p>
+            <input id="side-b" type="number" required>
+            <br>
+            <button onclick="rectangle()">Oblicz</button>
+            <p>Pole prostokątu wynosi:</p>
+            <p class="rectangle-result"></p>
+        </div>
     </div>
     </div>
 </main>
+<script src="app.js"></script>
 
 </html>
