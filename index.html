@@ -15,86 +15,128 @@
     <header id="header">
         <h1>Obliczanie pola powierzchni</h1>
     </header>
+
+    <main>
+        <div class="options">
+            <div class="two-d">
+                <h2>2D</h2>
+                <ul>
+                    <li id="square-calc">kwadrat</li>
+                    <li id="rectangle-calc">prostokąt</li>
+                    <li>trójkąt</li>
+                    <li>trapez</li>
+                    <li>romb</li>
+                    <li>koło</li>
+                </ul>
+            </div>
+            <div class="three-d">
+                <h2>3D</h2>
+                <ul>
+                    <li>graniastosłup trójkątny</li>
+                    <li>graniastosłup czworokątny</li>
+                    <li>szcześcian</li>
+                    <li>walec</li>
+                    <li>stożek</li>
+                </ul>
+            </div>
+        </div>
+        <div class="two-dimentions">
+            <div class="calc">
+                <div class="box">
+                    <h2>Kwadrat</h2>
+                    <p>Podaj długość boku (cm):</p>
+                    <input id="side" type="number" required>
+                    <br>
+                    <button onclick="square()">Oblicz</button>
+                    <p>Pole kwadratu wynosi:</p>
+                    <p class="square-result"></p>
+                </div>
+            </div>
+            <div class="calc">
+                <div class="box">
+                    <h2>Prostokąt</h2>
+                    <p>Podaj długość boku a (cm):</p>
+                    <input id="side-a" type="number" required>
+                    <p>Podaj długość boku b (cm):</p>
+                    <input id="side-b" type="number" required>
+                    <br>
+                    <button onclick="rectangle()">Oblicz</button>
+                    <p>Pole prostokąta wynosi:</p>
+                    <p class="rectangle-result"></p>
+                </div>
+            </div>
+            <div class="calc">
+                <div class="box">
+                    <h2>Trójkąt</h2>
+                    <p>Podaj długość boku a (cm):</p>
+                    <input id="triangle-side" type="number" required>
+                    <p>Podaj długość wysokości opuszczonej na bok a (cm):</p>
+                    <input id="height" type="number" required>
+                    <br>
+                    <button onclick="triangle()">Oblicz</button>
+                    <p>Pole trójkąta wynosi:</p>
+                    <p class="triangle-result"></p>
+                </div>
+            </div>
+            <div class="calc box-trapezoid">
+                <div class="box box-trapezoid">
+                    <h2>Trapez</h2>
+                    <p>Podaj długość dłuższej podstawy (cm):</p>
+                    <input id="trapezoid-side-longer" type="number" required>
+                    <p>Podaj długość krótszej podstawy (cm):</p>
+                    <input id="trapezoid-side-shorter" type="number" required>
+                    <p>Podaj długość wysokości (cm):</p>
+                    <input id="trapezoid-height" type="number" required>
+                    <br>
+                    <button onclick="trapezoid()">Oblicz</button>
+                    <p>Pole trapezu wynosi:</p>
+                    <p class="trapezoid-result"></p>
+                </div>
+            </div>
+            <div class="calc">
+                <div class="box">
+                    <h2>Romb</h2>
+                    <p>Podaj długość boku (cm):</p>
+                    <input id="rhombus-side" type="number" required>
+                    <p>Podaj długość wysokości opuszczonej na bok a (cm):</p>
+                    <input id="rhombus-height" type="number" required>
+                    <br>
+                    <button onclick="rhombus()">Oblicz</button>
+                    <p>Pole trapezu wynosi:</p>
+                    <p class="rhombus-result"></p>
+                </div>
+            </div>
+            <div class="calc">
+                <div class="box">
+                    <h2>Koło</h2>
+                    <p>Podaj długość promienia (cm):</p>
+                    <input id="circle-radius" type="number" required>
+                    <br>
+                    <button onclick="circle()">Oblicz</button>
+                    <p>Pole koła wynosi:</p>
+                    <p class="circle-result"></p>
+                </div>
+            </div>
+        </div>
+        <div class="three-dimentions">
+            <div class="calc">
+                <div class="box">
+                    <h2>Graniastosłup trójkątny</h2>
+                    <p>Podaj długość boku (cm):</p>
+                    <input id="rhombus-side" type="number" required>
+                    <p>Podaj długość wysokości opuszczonej na bok a (cm):</p>
+                    <input id="rhombus-height" type="number" required>
+                    <br>
+                    <button onclick="rhombus()">Oblicz</button>
+                    <p>Pole trapezu wynosi:</p>
+                    <p class="rhombus-result"></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>Jędrzej Bielicki &copy , 01.2020</footer>
+    <script src="app.js"></script>
 </body>
-<main>
-    <div class="options">
-        <div class="two-d">
-            <h2>2D</h2>
-            <ul>
-                <li id="square-calc">kwadrat</li>
-                <li id="rectangle-calc">prostokąt</li>
-                <li>trójkąt</li>
-                <li>trapez</li>
-                <li>rąb</li>
-                <li>koło</li>
-            </ul>
-        </div>
-        <div class="three-d">
-            <h2>3D</h2>
-            <ul>
-                <li>graniastosłup trójkątny</li>
-                <li>graniastosłup czworokątny</li>
-                <li>szcześcian</li>
-                <li>walec</li>
-                <li>stożek</li>
-            </ul>
-        </div>
-    </div>
-    <div class="calc">
-        <div class="box">
-            <h2>Kwadrat</h2>
-            <p>Podaj długość boku (cm):</p>
-            <input id="side" type="number" required>
-            <br>
-            <button onclick="square()">Oblicz</button>
-            <p>Pole kwadratu wynosi:</p>
-            <p class="square-result"></p>
-        </div>
-    </div>
-    <div class="calc">
-        <div class="box">
-            <h2>Prostokąt</h2>
-            <p>Podaj długość boku a (cm):</p>
-            <input id="side-a" type="number" required>
-            <p>Podaj długość boku b (cm):</p>
-            <input id="side-b" type="number" required>
-            <br>
-            <button onclick="rectangle()">Oblicz</button>
-            <p>Pole prostokąta wynosi:</p>
-            <p class="rectangle-result"></p>
-        </div>
-    </div>
-    <div class="calc">
-        <div class="box">
-            <h2>Trójkąt</h2>
-            <p>Podaj długość boku a (cm):</p>
-            <input id="triangle-side" type="number" required>
-            <p>Podaj długość wysokości opuszczonej na bok a (cm):</p>
-            <input id="height" type="number" required>
-            <br>
-            <button onclick="triangle()">Oblicz</button>
-            <p>Pole trójkąta wynosi:</p>
-            <p class="triangle-result"></p>
-        </div>
-    </div>
-    <div class="calc">
-        <div class="box">
-            <h2>Trapez</h2>
-            <p>Podaj długość dłuższej podstawy (cm):</p>
-            <input id="trapezoid-side-longer" type="number" required>
-            <p>Podaj długość krótszej podstawy (cm):</p>
-            <input id="trapezoid-side-shorter" type="number" required>
-            <p>Podaj długość wysokości (cm):</p>
-            <input id="trapezoid-height" type="number" required>
-            <br>
-            <button onclick="trapezoid()">Oblicz</button>
-            <p>Pole trapezu wynosi:</p>
-            <p class="trapezoid-result"></p>
-        </div>
-    </div>
-    </div>
-</main>
-<footer>Jędrzej Bielicki &copy , 01.2020</footer>
-<script src="app.js"></script>
 
 </html>

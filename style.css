@@ -7,8 +7,8 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 footer{
-    height: 2rem;
-    margin-top: 20px;
+    height: 5vh;
+    /* margin-top: 20px; */
     background: #E1E2E2;
     text-align: center;
     color: #1D2228;
@@ -60,7 +60,6 @@ h2{
     box-shadow: 10px 10px 64px 31px rgba(75,84,122,1);
     text-align: center;
     color: #E1E2E2;
-    /* display: none; */
 }
 input{
     background: rgba(75,84,122,1);
@@ -82,4 +81,13 @@ button{
 }
 .result{
     margin-top: 10px;
+}
+.box-trapezoid{
+    height: 50vh;
+}
+.two-dimentions{
+    display: none;
+}
+main{
+    min-height: 70vh;
 }
