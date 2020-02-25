@@ -7,8 +7,10 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 footer{
-    height: 5vh;
-    /* margin-top: 20px; */
+    height: 3vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     background: #E1E2E2;
     text-align: center;
     color: #1D2228;
